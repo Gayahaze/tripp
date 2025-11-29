@@ -46,8 +46,7 @@ public class LoginActivity extends AppCompatActivity {
 
             if (username.equals("leqaa") && password.equals("1111")) {
 
-                // 🔹 حفظ البيانات إذا اخترت Remember Me
-                if (rememberMe.isChecked()) {
+                 if (rememberMe.isChecked()) {
                     sharedPreferences.edit()
                             .putString("username", username)
                             .putString("password", password)
@@ -65,8 +64,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        // 🔹 TextView Sign Up
-        tvSignup.setOnClickListener(v -> {
+         tvSignup.setOnClickListener(v -> {
             Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
             startActivity(intent);
         });
